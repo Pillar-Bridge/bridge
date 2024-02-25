@@ -39,9 +39,7 @@ This reduces medical diagnostic errors, improves the quality of life for people 
 - Flutter SDK: Compatible with version >=3.2.6 <4.0.0
 - geolocator: 11.0.0
 - just_audio: 0.9.36
-- path_provider: 2.1.2
 - record: 5.0.4
-- shared_preferences: 2.2.2
 - speech_to_text: 6.6.0
   
 ### 2. Architecture
