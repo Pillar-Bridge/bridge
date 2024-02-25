@@ -7,7 +7,7 @@ This is a project that participated in the 2024 Google Solution Challenge.
 # Member
 The team name that developed the **Bridge** project is **Pillar**.
 
-| **Gyeongrok Kim** | **Dawon Seo** | **Mirae Kim** | **Daehyeon Choi** |
+| **Gyeongrok Kim** | **Dawon Seo** | **Mirae Kim** | **Daehyeon Choe** |
 | :---------------: | :-----------: | :-----------: | :---------------: |
 | [<img src="https://github.com/gomsang.png" height=100 width=100><br/>@gomsang](https://github.com/gomsang) | [<img src="https://github.com/Dawon00.png" height=100 width=100><br/>@Dawon00](https://github.com/Dawon00) | [<img src="https://github.com/FutureandKim.png" height=100 width=100><br/>@FutureandKim](https://github.com/FutureandKim) | [<img src="https://github.com/dablro12.png" height=100 width=100><br/>@dablro12](https://github.com/dablro12) |
 | Lead <br/> Frontend | Frontend | Backend | AI |
