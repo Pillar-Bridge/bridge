@@ -100,7 +100,6 @@ lib
 
 ### 2. Architecture
 ```
-```
 Bridge
 ┣━ Dockerfile
 ┣━ build.gradle
@@ -202,7 +201,6 @@ Bridge
 ### 1. Tech Stack
 
 ### 2. Architecture
-```
 ```
 Bridge_AI
 ┣━ app
