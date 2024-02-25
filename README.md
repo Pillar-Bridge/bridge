@@ -98,6 +98,7 @@ lib
 - MySQL
 - Docker
 - AWS EC2
+- Google Map Platform: place API
 
 ### 2. Architecture
 ```
