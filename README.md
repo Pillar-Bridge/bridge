@@ -189,7 +189,14 @@ src
 
 ## AI
 ### 1. Tech Stack
-
+- Language : Python 3.8
+- Reccomendation LLM : Google Cloud Gemini Pro
+- Text-To-Speech : Google Cloud TTS
+- Natural Langauge Processing : NLTK
+- Pytorch 
+- 134" Language Translation : Google Cloud Translation
+- Audio Processing for Custom TTS : Torrtoise-TTS(Update Coming Soon!)
+  
 ### 2. Architecture
 ```
 Bridge_AI
