@@ -100,114 +100,144 @@ lib
 
 ### 2. Architecture
 ```
-┣ main
-┃   ┣ generated
-┃   ┣ java
-┃   ┃   ┗ com
-┃   ┃       ┗ pillar
-┃   ┃           ┗ bridge
-┃   ┃               ┃   BridgeApplication.java
-┃   ┃               ┃   
-┃   ┃               ┣ apiUtils
-┃   ┃               ┃   ┃   ErrorAdvice.java
-┃   ┃               ┃   ┃   ResponseDto.java
-┃   ┃               ┃   ┃   ResponseUtil.java
-┃   ┃               ┃   ┃   
-┃   ┃               ┃   ┗ codeStatus
-┃   ┃               ┃           ErrorResponse.java
-┃   ┃               ┃           SuccessResponse.java
-┃   ┃               ┃           
-┃   ┃               ┣ config
-┃   ┃               ┃       AppConfig.java
-┃   ┃               ┃       Constants.java
-┃   ┃               ┃       
-┃   ┃               ┣ controller
-┃   ┃               ┃       AlterController.java
-┃   ┃               ┃       DialogueController.java
-┃   ┃               ┃       FullDialogueController.java
-┃   ┃               ┃       PlacesController.java
-┃   ┃               ┃       ReplyController.java
-┃   ┃               ┃       TTSController.java
-┃   ┃               ┃       UpdateMessageController.java
-┃   ┃               ┃       
-┃   ┃               ┣ dto
-┃   ┃               ┃   ┃   PlacesDto.java
-┃   ┃               ┃   ┃   RegisterResponse.java
-┃   ┃               ┃   ┃   RequestModel.java
-┃   ┃               ┃   ┃   TTSDto.java
-┃   ┃               ┃   ┃   
-┃   ┃               ┃   ┣ alter
-┃   ┃               ┃   ┃       AlterRequest.java
-┃   ┃               ┃   ┃       AlterResponse.java
-┃   ┃               ┃   ┃       WordOption.java
-┃   ┃               ┃   ┃       
-┃   ┃               ┃   ┣ dialogue
-┃   ┃               ┃   ┃       DialogueRequest.java
-┃   ┃               ┃   ┃       DialogueResponse.java
-┃   ┃               ┃   ┃       
-┃   ┃               ┃   ┣ FullDialogue
-┃   ┃               ┃   ┃       FullDialogueDto.java
-┃   ┃               ┃   ┃       FullDialogueResponseDto.java
-┃   ┃               ┃   ┃       
-┃   ┃               ┃   ┣ place
-┃   ┃               ┃   ┃   ┣ googleApi
-┃   ┃               ┃   ┃   ┃       GoogleResponse.java
-┃   ┃               ┃   ┃   ┃       PlaceResponse.java
-┃   ┃               ┃   ┃   ┃       PlacesRequest.java
-┃   ┃               ┃   ┃   ┃       
-┃   ┃               ┃   ┃   ┗ kakaoApi
-┃   ┃               ┃   ┃           Document.java
-┃   ┃               ┃   ┃           KaKaoResponse.java
-┃   ┃               ┃   ┃           Meta.java
-┃   ┃               ┃   ┃           PlaceNameResponse.java
-┃   ┃               ┃   ┃           SameName.java
-┃   ┃               ┃   ┃           
-┃   ┃               ┃   ┣ TTS
-┃   ┃               ┃   ┃       TTSRequest.java
-┃   ┃               ┃   ┃       TTSResponse.java
-┃   ┃               ┃   ┃       
-┃   ┃               ┃   ┗ UpdateMessage
-┃   ┃               ┃           UpdateRequest.java
-┃   ┃               ┃           UpdateResponse.java
-┃   ┃               ┃           
-┃   ┃               ┣ entitiy
-┃   ┃               ┃       Device.java
-┃   ┃               ┃       Dialogue.java
-┃   ┃               ┃       Messages.java
-┃   ┃               ┃       
-┃   ┃               ┣ repository
-┃   ┃               ┃       DeviceRepository.java
-┃   ┃               ┃       DialogueRepository.java
-┃   ┃               ┃       MessageRepository.java
-┃   ┃               ┃       
-┃   ┃               ┗ service
-┃   ┃                   ┃   AlterService.java
-┃   ┃                   ┃   DeviceService.java
-┃   ┃                   ┃   DialogueService.java
-┃   ┃                   ┃   FullDialogueService.java
-┃   ┃                   ┃   ReplyService.java
-┃   ┃                   ┃   TTSService.java
-┃   ┃                   ┃   UpdateMessageService.java
-┃   ┃                   ┃   
-┃   ┃                   ┗ place
-┃   ┃                           RecommPlaceGoogleService.java
-┃   ┃                           RecommPlaceKaKAoService.java
-┃   ┃                           
-┃   ┗ resources
-┃       ┃   application.properties
-┃       ┃   
-┃       ┣ static
-┃       ┗ templates
-┗ test
-    ┗ java
-        ┗ com
-            ┗ pillar
-                ┗ bridge
-                        BridgeApplicationTests.java
+```
+Bridge
+┣━ Dockerfile
+┣━ build.gradle
+┣━ gradle
+┃  ┗━ wrapper
+┃     ┣━ gradle-wrapper.jar
+┃     ┗━ gradle-wrapper.properties
+┣━ gradlew
+┣━ gradlew.bat
+┣━ settings.gradle
+┗━ src
+   ┣━ main
+   ┃  ┣━ java
+   ┃  ┃  ┗━ com
+   ┃  ┃     ┗━ pillar
+   ┃  ┃        ┗━ bridge
+   ┃  ┃           ┣━ BridgeApplication.java
+   ┃  ┃           ┣━ apiUtils
+   ┃  ┃           ┃  ┣━ ErrorAdvice.java
+   ┃  ┃           ┃  ┣━ ResponseDto.java
+   ┃  ┃           ┃  ┣━ ResponseUtil.java
+   ┃  ┃           ┃  ┗━ codeStatus
+   ┃  ┃           ┃     ┣━ ErrorResponse.java
+   ┃  ┃           ┃     ┗━ SuccessResponse.java
+   ┃  ┃           ┣━ config
+   ┃  ┃           ┃  ┣━ AppConfig.java
+   ┃  ┃           ┃  ┗━ Constants.java
+   ┃  ┃           ┣━ controller
+   ┃  ┃           ┃  ┣━ AlterController.java
+   ┃  ┃           ┃  ┣━ DialogueController.java
+   ┃  ┃           ┃  ┣━ FullDialogueController.java
+   ┃  ┃           ┃  ┣━ PlacesController.java
+   ┃  ┃           ┃  ┣━ ReplyController.java
+   ┃  ┃           ┃  ┣━ TTSController.java
+   ┃  ┃           ┃  ┗━ UpdateMessageController.java
+   ┃  ┃           ┣━ dto
+   ┃  ┃           ┃  ┣━ FullDialogue
+   ┃  ┃           ┃  ┃  ┣━ FullDialogueDto.java
+   ┃  ┃           ┃  ┃  ┗━ FullDialogueResponseDto.java
+   ┃  ┃           ┃  ┣━ PlacesDto.java
+   ┃  ┃           ┃  ┣━ RegisterResponse.java
+   ┃  ┃           ┃  ┣━ RequestModel.java
+   ┃  ┃           ┃  ┣━ TTS
+   ┃  ┃           ┃  ┃  ┣━ TTSRequest.java
+   ┃  ┃           ┃  ┃  ┗━ TTSResponse.java
+   ┃  ┃           ┃  ┣━ TTSDto.java
+   ┃  ┃           ┃  ┣━ UpdateMessage
+   ┃  ┃           ┃  ┃  ┣━ UpdateRequest.java
+   ┃  ┃           ┃  ┃  ┗━ UpdateResponse.java
+   ┃  ┃           ┃  ┣━ alter
+   ┃  ┃           ┃  ┃  ┣━ AlterRequest.java
+   ┃  ┃           ┃  ┃  ┣━ AlterResponse.java
+   ┃  ┃           ┃  ┃  ┗━ WordOption.java
+   ┃  ┃           ┃  ┣━ dialogue
+   ┃  ┃           ┃  ┃  ┣━ DialogueRequest.java
+   ┃  ┃           ┃  ┃  ┗━ DialogueResponse.java
+   ┃  ┃           ┃  ┗━ place
+   ┃  ┃           ┃     ┣━ googleApi
+   ┃  ┃           ┃     ┃  ┣━ GoogleResponse.java
+   ┃  ┃           ┃     ┃  ┣━ PlaceResponse.java
+   ┃  ┃           ┃     ┃  ┗━ PlacesRequest.java
+   ┃  ┃           ┃     ┗━ kakaoApi
+   ┃  ┃           ┃        ┣━ Document.java
+   ┃  ┃           ┃        ┣━ KaKaoResponse.java
+   ┃  ┃           ┃        ┣━ Meta.java
+   ┃  ┃           ┃        ┣━ PlaceNameResponse.java
+   ┃  ┃           ┃        ┗━ SameName.java
+   ┃  ┃           ┣━ entitiy
+   ┃  ┃           ┃  ┣━ Device.java
+   ┃  ┃           ┃  ┣━ Dialogue.java
+   ┃  ┃           ┃  ┗━ Messages.java
+   ┃  ┃           ┣━ repository
+   ┃  ┃           ┃  ┣━ DeviceRepository.java
+   ┃  ┃           ┃  ┣━ DialogueRepository.java
+   ┃  ┃           ┃  ┗━ MessageRepository.java
+   ┃  ┃           ┗━ service
+   ┃  ┃              ┣━ AlterService.java
+   ┃  ┃              ┣━ DeviceService.java
+   ┃  ┃              ┣━ DialogueService.java
+   ┃  ┃              ┣━ FullDialogueService.java
+   ┃  ┃              ┣━ ReplyService.java
+   ┃  ┃              ┣━ TTSService.java
+   ┃  ┃              ┣━ UpdateMessageService.java
+   ┃  ┃              ┗━ place
+   ┃  ┃                 ┣━ RecommPlaceGoogleService.java
+   ┃  ┃                 ┗━ RecommPlaceKaKAoService.java
+   ┃  ┗━ resources
+   ┗━ test
+      ┗━ java
+         ┗━ com
+            ┗━ pillar
+               ┗━ bridge
+                  ┗━ BridgeApplicationTests.java
 
 ```
+
 
 ## AI
 ### 1. Tech Stack
 
 ### 2. Architecture
+```
+```
+Bridge_AI
+┣━ app
+┃  ┣━ __init__.py
+┃  ┣━ main.py
+┃  ┣━ requirements.txt
+┃  ┗━ routers
+┃     ┣━ __init__.py
+┃     ┣━ alternative_word.py
+┃     ┣━ recomm_msg.py
+┃     ┣━ stt.py
+┃     ┗━ tts.py
+┣━ recomm
+┃  ┣━ __init__.py
+┃  ┣━ input
+┃  ┃  ┗━ testInput.json
+┃  ┣━ prompt.txt
+┃  ┣━ prompt_2.txt
+┃  ┣━ result
+┃  ┃  ┗━ output.json
+┃  ┣━ run.py
+┃  ┣━ script_2.py
+┃  ┣━ synonyms.ipynb
+┃  ┗━ utils
+┃     ┣━ multi_turn_1.py
+┃     ┣━ multi_turn_2.py
+┃     ┣━ script.py
+┃     ┣━ single_turn.py
+┃     ┗━ tutorial.ipynb
+┣━ requirements.txt
+┗━ tts
+   ┣━ __init__.py
+   ┣━ gtts.py
+   ┣━ input
+   ┣━ result
+   ┣━ run.py
+   ┗━ tutorial.ipynb
+```
