@@ -1,0 +1,9 @@
+[submodule "bridge-flutter"]
+	path = bridge-flutter
+	url = https://github.com/Pillar-Bridge/bridge-flutter.git
+[submodule "bridge-backend"]
+	path = bridge-backend
+	url = https://github.com/Pillar-Bridge/bridge-backend.git
+[submodule "bridge-AI"]
+	path = bridge-AI
+	url = https://github.com/Pillar-Bridge/bridge_AI.git
