@@ -101,110 +101,111 @@ lib
 
 ### 2. Architecture
 ```
-+---main
-|   +---generated
-|   +---java
-|   |   \---com
-|   |       \---pillar
-|   |           \---bridge
-|   |               |   BridgeApplication.java
-|   |               |   
-|   |               +---apiUtils
-|   |               |   |   ErrorAdvice.java
-|   |               |   |   ResponseDto.java
-|   |               |   |   ResponseUtil.java
-|   |               |   |   
-|   |               |   \---codeStatus
-|   |               |           ErrorResponse.java
-|   |               |           SuccessResponse.java
-|   |               |           
-|   |               +---config
-|   |               |       AppConfig.java
-|   |               |       Constants.java
-|   |               |       
-|   |               +---controller
-|   |               |       AlterController.java
-|   |               |       DialogueController.java
-|   |               |       FullDialogueController.java
-|   |               |       PlacesController.java
-|   |               |       ReplyController.java
-|   |               |       TTSController.java
-|   |               |       UpdateMessageController.java
-|   |               |       
-|   |               +---dto
-|   |               |   |   PlacesDto.java
-|   |               |   |   RegisterResponse.java
-|   |               |   |   RequestModel.java
-|   |               |   |   TTSDto.java
-|   |               |   |   
-|   |               |   +---alter
-|   |               |   |       AlterRequest.java
-|   |               |   |       AlterResponse.java
-|   |               |   |       WordOption.java
-|   |               |   |       
-|   |               |   +---dialogue
-|   |               |   |       DialogueRequest.java
-|   |               |   |       DialogueResponse.java
-|   |               |   |       
-|   |               |   +---FullDialogue
-|   |               |   |       FullDialogueDto.java
-|   |               |   |       FullDialogueResponseDto.java
-|   |               |   |       
-|   |               |   +---place
-|   |               |   |   +---googleApi
-|   |               |   |   |       GoogleResponse.java
-|   |               |   |   |       PlaceResponse.java
-|   |               |   |   |       PlacesRequest.java
-|   |               |   |   |       
-|   |               |   |   \---kakaoApi
-|   |               |   |           Document.java
-|   |               |   |           KaKaoResponse.java
-|   |               |   |           Meta.java
-|   |               |   |           PlaceNameResponse.java
-|   |               |   |           SameName.java
-|   |               |   |           
-|   |               |   +---TTS
-|   |               |   |       TTSRequest.java
-|   |               |   |       TTSResponse.java
-|   |               |   |       
-|   |               |   \---UpdateMessage
-|   |               |           UpdateRequest.java
-|   |               |           UpdateResponse.java
-|   |               |           
-|   |               +---entitiy
-|   |               |       Device.java
-|   |               |       Dialogue.java
-|   |               |       Messages.java
-|   |               |       
-|   |               +---repository
-|   |               |       DeviceRepository.java
-|   |               |       DialogueRepository.java
-|   |               |       MessageRepository.java
-|   |               |       
-|   |               \---service
-|   |                   |   AlterService.java
-|   |                   |   DeviceService.java
-|   |                   |   DialogueService.java
-|   |                   |   FullDialogueService.java
-|   |                   |   ReplyService.java
-|   |                   |   TTSService.java
-|   |                   |   UpdateMessageService.java
-|   |                   |   
-|   |                   \---place
-|   |                           RecommPlaceGoogleService.java
-|   |                           RecommPlaceKaKAoService.java
-|   |                           
-|   \---resources
-|       |   application.properties
-|       |   
-|       +---static
-|       \---templates
-\---test
-    \---java
-        \---com
-            \---pillar
-                \---bridge
+┣ main
+┃   ┣ generated
+┃   ┣ java
+┃   ┃   ┗ com
+┃   ┃       ┗ pillar
+┃   ┃           ┗ bridge
+┃   ┃               ┃   BridgeApplication.java
+┃   ┃               ┃   
+┃   ┃               ┣ apiUtils
+┃   ┃               ┃   ┃   ErrorAdvice.java
+┃   ┃               ┃   ┃   ResponseDto.java
+┃   ┃               ┃   ┃   ResponseUtil.java
+┃   ┃               ┃   ┃   
+┃   ┃               ┃   ┗ codeStatus
+┃   ┃               ┃           ErrorResponse.java
+┃   ┃               ┃           SuccessResponse.java
+┃   ┃               ┃           
+┃   ┃               ┣ config
+┃   ┃               ┃       AppConfig.java
+┃   ┃               ┃       Constants.java
+┃   ┃               ┃       
+┃   ┃               ┣ controller
+┃   ┃               ┃       AlterController.java
+┃   ┃               ┃       DialogueController.java
+┃   ┃               ┃       FullDialogueController.java
+┃   ┃               ┃       PlacesController.java
+┃   ┃               ┃       ReplyController.java
+┃   ┃               ┃       TTSController.java
+┃   ┃               ┃       UpdateMessageController.java
+┃   ┃               ┃       
+┃   ┃               ┣ dto
+┃   ┃               ┃   ┃   PlacesDto.java
+┃   ┃               ┃   ┃   RegisterResponse.java
+┃   ┃               ┃   ┃   RequestModel.java
+┃   ┃               ┃   ┃   TTSDto.java
+┃   ┃               ┃   ┃   
+┃   ┃               ┃   ┣ alter
+┃   ┃               ┃   ┃       AlterRequest.java
+┃   ┃               ┃   ┃       AlterResponse.java
+┃   ┃               ┃   ┃       WordOption.java
+┃   ┃               ┃   ┃       
+┃   ┃               ┃   ┣ dialogue
+┃   ┃               ┃   ┃       DialogueRequest.java
+┃   ┃               ┃   ┃       DialogueResponse.java
+┃   ┃               ┃   ┃       
+┃   ┃               ┃   ┣ FullDialogue
+┃   ┃               ┃   ┃       FullDialogueDto.java
+┃   ┃               ┃   ┃       FullDialogueResponseDto.java
+┃   ┃               ┃   ┃       
+┃   ┃               ┃   ┣ place
+┃   ┃               ┃   ┃   ┣ googleApi
+┃   ┃               ┃   ┃   ┃       GoogleResponse.java
+┃   ┃               ┃   ┃   ┃       PlaceResponse.java
+┃   ┃               ┃   ┃   ┃       PlacesRequest.java
+┃   ┃               ┃   ┃   ┃       
+┃   ┃               ┃   ┃   ┗ kakaoApi
+┃   ┃               ┃   ┃           Document.java
+┃   ┃               ┃   ┃           KaKaoResponse.java
+┃   ┃               ┃   ┃           Meta.java
+┃   ┃               ┃   ┃           PlaceNameResponse.java
+┃   ┃               ┃   ┃           SameName.java
+┃   ┃               ┃   ┃           
+┃   ┃               ┃   ┣ TTS
+┃   ┃               ┃   ┃       TTSRequest.java
+┃   ┃               ┃   ┃       TTSResponse.java
+┃   ┃               ┃   ┃       
+┃   ┃               ┃   ┗ UpdateMessage
+┃   ┃               ┃           UpdateRequest.java
+┃   ┃               ┃           UpdateResponse.java
+┃   ┃               ┃           
+┃   ┃               ┣ entitiy
+┃   ┃               ┃       Device.java
+┃   ┃               ┃       Dialogue.java
+┃   ┃               ┃       Messages.java
+┃   ┃               ┃       
+┃   ┃               ┣ repository
+┃   ┃               ┃       DeviceRepository.java
+┃   ┃               ┃       DialogueRepository.java
+┃   ┃               ┃       MessageRepository.java
+┃   ┃               ┃       
+┃   ┃               ┗ service
+┃   ┃                   ┃   AlterService.java
+┃   ┃                   ┃   DeviceService.java
+┃   ┃                   ┃   DialogueService.java
+┃   ┃                   ┃   FullDialogueService.java
+┃   ┃                   ┃   ReplyService.java
+┃   ┃                   ┃   TTSService.java
+┃   ┃                   ┃   UpdateMessageService.java
+┃   ┃                   ┃   
+┃   ┃                   ┗ place
+┃   ┃                           RecommPlaceGoogleService.java
+┃   ┃                           RecommPlaceKaKAoService.java
+┃   ┃                           
+┃   ┗ resources
+┃       ┃   application.properties
+┃       ┃   
+┃       ┣ static
+┃       ┗ templates
+┗ test
+    ┗ java
+        ┗ com
+            ┗ pillar
+                ┗ bridge
                         BridgeApplicationTests.java
+
 ```
 
 ## AI
